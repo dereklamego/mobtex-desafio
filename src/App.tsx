@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style/global-styles.css'
+import { Container} from '@mui/material';
+import { StyledBox } from './components/StyledBox';
+import { Title } from './components/Title/';
+import { Gallery } from './components/Gallery';
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg" >
+      <StyledBox>
+        <Title text="MOBTEX - REACT CHALLENGE" />
+        <Gallery />
+      </StyledBox>
+    </Container>
+
   );
 }
 
-export default App;
+
